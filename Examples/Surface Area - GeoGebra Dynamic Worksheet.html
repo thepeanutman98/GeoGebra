@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Surface Area - GeoGebra Dynamic Worksheet</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="GeoGebra" />
+<style type="text/css"><!--body { font-family:Arial,Helvetica,sans-serif; margin-left:40px }
+.valign_middle {
+	vertical-align: middle;
+}
+.caption {
+	font-size: x-small;
+	font-weight: bold;
+}
+--></style>
+</head>
+<body>
+
+<script src="https://www.geogebra.org/scripts/deployggb.js"></script>
+<script type="text/javascript">
+
+function merge(obj1, obj2) {
+    for(attr in obj1)
+        obj2[attr]=obj1[attr];
+    return obj2;
+}
+
+var parameters = {
+                        "prerelease":false,
+                        "showToolBar":true,
+                        "borderColor":null,
+                        "showMenuBar":false,
+                        "showAlgebraInput":false,
+                        "customToolbar":"0 || 1",
+                        "showResetIcon":true,
+                        "enableLabelDrags":false,
+                        "enableShiftDragZoom":true,
+                        "enableRightClick":false,
+                        "capturingThreshold":null,
+                        "showToolBarHelp":true,
+                        "errorDialogsActive":true,
+                        "useBrowserForJS":false
+			};
+
+
+var applet1 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_polyhedron.ggb","width":625,"height":275}), true);
+
+var applet2 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_netcube.ggb","width":625,"height":275}), true);
+
+var applet3 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_netcylinder.ggb","width":900,"height":500}), true);
+
+var applet4 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_netcone.ggb","width":900,"height":500}), true);
+
+var applet5 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_netPyramid.ggb","width":900,"height":500}), true);
+
+var applet6 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_rectangularPrism.ggb","width":800,"height":350}), true);
+
+var applet7 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_triangularPrism.ggb","width":800,"height":375}), true);
+
+var applet8 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_triangularPrism2.ggb","width":800,"height":375}), true);
+
+var applet9 = new GGBApplet(merge(parameters, {"filename":"https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/ch11_rectangularPyramid.ggb","width":800,"height":350}), true);
+
+window.onload = function() {
+        applet1.inject('applet_container1', 'preferHTML5');
+applet2.inject('applet_container2', 'preferHTML5');
+
+applet3.inject('applet_container3', 'preferHTML5');
+
+applet4.inject('applet_container4', 'preferHTML5');
+applet5.inject('applet_container5', 'preferHTML5');
+applet6.inject('applet_container6', 'preferHTML5');
+applet7.inject('applet_container7', 'preferHTML5');
+applet8.inject('applet_container8', 'preferHTML5');
+applet9.inject('applet_container9', 'preferHTML5');
+
+    }
+
+</script>
+
+<h2>Investigating Surface Area</h2>
+
+<p><strong>I. Polyhedra</strong>. A <strong>polyhedron </strong>is a three-dimensional figure whose surfaces are polygons. Each polygon is 
+a <strong>face </strong>of the polyhedron. An <strong>edge </strong>is a segment that is formed by the intersection of two faces. 
+A <strong>vertex </strong>is a point where three or more edges intersect.</p>
+
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="625" height="275"mayscript="true">
+	<param name="filename" value="ch11_polyhedron.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="true" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="true" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_polyhedron.ggb">
+<span class="caption">ch11_polyhedron.ggb</span></a><span class="caption">.</span>
+
+<div id="applet_container1"></div>
+
+<p>&nbsp;</p>
+
+<p><strong>II. Nets</strong>. Use each net to find a formula for the surface area of the polyhedron.</p>
+
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="625" height="425"mayscript="true">
+	<param name="filename" value="ch11_netcube.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_netcube.ggb">
+<span class="caption">ch11_netcube.ggb</span></a><span class="caption">.</span><div id="applet_container2"></div>
+
+<p>1. Find a formula for the surface area of a cube with side length <em>s</em>.</p>
+<p>&nbsp;</p>
+
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="900" height="500"mayscript="true">
+	<param name="filename" value="ch11_netcylinder.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_netcylinder.ggb">
+<span class="caption">ch11_netcylinder.ggb</span></a><span class="caption">.</span><div id="applet_container3"></div>
+
+<p>2. Find a formula for the surface area of a cylinder with radius <em>r</em> and height <em>h</em>.</p>
+<p>&nbsp;</p>
+
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="900" height="500"mayscript="true">
+	<param name="filename" value="ch11_netcone.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_netcone.ggb">
+<span class="caption">ch11_netcone.ggb</span></a><span class="caption">.</span><div id="applet_container4"></div>
+
+<p>3. Find a formula for the surface area of a cone with radius <em>r</em>, height <em>h</em>, and slant height <em>l</em>.</p>
+<p>&nbsp;</p>
+
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="900" height="500"mayscript="true">
+	<param name="filename" value="ch11_netPyramid.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_netPyramid.ggb">
+<span class="caption">ch11_netPyramid.ggb</span></a><span class="caption">.</span><div id="applet_container5"></div>
+
+<p>4. Find a formula for the surface area of the square pyramid pictured above.</p>
+<p>&nbsp;</p>
+
+<p><strong>III. Prisms</strong>. A <strong>prism </strong>is a polyhedron with exactly two congruent, parallel faces, called <strong>bases</strong>. 
+The other faces are called <strong>lateral faces</strong>. You name a prism by the shape of its base.  
+An altitude of a prism is a perpendicular segment that joins the planes of the bases. 
+The height of the prism is the length of an altitude.</p>
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="800" height="350"mayscript="true">
+	<param name="filename" value="ch11_rectangularPrism.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_rectangularPrism.ggb">
+<span class="caption">ch11_rectangularPrism.ggb</span></a><span class="caption">.</span><div id="applet_container6"></div>
+
+<p>5. Find a formula for the surface area of a rectangular prism with height <em>h</em>, length <em>l</em>, and width <em>w</em>.<br/>
+6. Use the slider to change the height, length, and width of the rectangular prism and caluclate the surface area. 
+Use the slider on the right to check your answer.</p>
+<p>&nbsp;</p>
+
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="800" height="375"mayscript="true">
+	<param name="filename" value="ch11_triangularPrism.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_triangularPrism.ggb">
+<span class="caption">ch11_triangularPrism.ggb</span></a><span class="caption">.</span><div id="applet_container7"></div>
+
+<p>7. Find a formula for the surface area of the right triangular prism pictured above.<br/>
+8. Use the slider to change the dimensions of the right triangular prism and calculate the surface area. 
+Use the slider on the right to check your answer.</p>
+<p>&nbsp;</p>
+
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="800" height="375"mayscript="true">
+	<param name="filename" value="ch11_triangularPrism2.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_triangularPrism2.ggb">
+<span class="caption">ch11_triangularPrism2.ggb</span></a><span class="caption">.</span><div id="applet_container8"></div>
+
+<p>9. Find a formula for the surface area of the triangular prism pictured above.<br/>
+10. Use the slider to change the dimensions of the triangular prism and calculate the surface area. 
+Use the slider on the right to check your answer.</p>
+<p>&nbsp;</p>
+
+<p><strong>IV. Pyramids</strong>. A <strong>pyramid </strong>is a polyhedron in which one face (the base) can be any polygon and the other face
+(the <strong>lateral faces</strong>) are triangles that meet at a common vertex. You can name a pyramid by the shape of its base.
+The altitude of a pryramid is the perpendicular segment from the vertex to the plane of the base. The length of the altitude is the height of the pyramid.
+A <strong>regular pyramid</strong> is a pyramid whose base is a regular polygon and whose lateral faces are congruent isosceles triangles.</p>
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/"
+	width="800" height="350"mayscript="true">
+	<param name="filename" value="ch11_rectangularPyramid.ggb"/>
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0, 3.2.45.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="true" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="true" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="true" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<br/><span class="caption">GeoGebra Applet pictured above: </span> <a href="ch11_rectangularPyramid.ggb">
+<span class="caption">ch11_rectangularPyramid.ggb</span></a><span class="caption">.</span><div id="applet_container9"></div>
+
+<p>11. Find a formula for the surface area of a rectangular pyramid with height <em>h</em>, length <em>l</em>, width <em>w</em>, and slant
+height <em>s.h.</em>.<br/>
+12. Use the slider to change the height, length, and width of the rectangular pyramid and caluclate the surface area. 
+Use the slider on the right to check your answer.</p>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>
