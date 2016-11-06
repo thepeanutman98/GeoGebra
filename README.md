@@ -9,3 +9,5 @@ function getGeoApplets(doc) {var applets = []; for (i in Array.from(doc.getEleme
 
 function paramsLocalGeoFileToGitHubFile(params) {var params2 = params; params2["filename"] = "https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/" + params2["filename"]; return params2}
 
+function geoGebraAppletInjectCode(params, varName, div) {return "var " + varName + " = new GGBApplet(" + JSON.stringify(params) + ', true); window.addEventListener("load", function(){' + varName + ".inject('" + div + "', 'preferHTML5')});"}
+
