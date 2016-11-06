@@ -5,5 +5,5 @@ function getGeoParams(applet) {var params = {}; for (i in applet.children) {if (
 
 function newGeoFrame(url) {document.body.append(document.createElement("iframe")); frame = document.body.lastChild; frame.style.display = "none"; frame.src = url; return frame}
 
-function getGeoApplets(doc) {var applets = []; for (i in Array.from(doc.getElementsByTagName("applet"))) {if (doc.getElementsByTagName("applet")[i].getAttribute("codebase").indexOf("geogebra") >= 0) {applets.push(doc.getElementsByTagName("applet")[i])}} return applets}
+function getGeoApplets(doc) {var applets = []; for (i in Array.from(doc.getElementsByTagName("applet"))) {try {var tester = doc.getElementsByTagName("applet")[i].getAttribute("codebase").indexOf("geogebra")} catch (err) {var tester = -2}; if (tester >= 0) {applets.push(doc.getElementsByTagName("applet")[i])}} return applets}
 
