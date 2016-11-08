@@ -75,7 +75,7 @@ function getRespectiveGeoParams(applets) {
 ```javascript
 function getRespectiveGeoAppletInjectCode(applets) {
   var code = [];
-  for (i in code) {
+  for (i in applets) {
     code.push(geoGebraAppletInjectCode(getGeoParams(applets[i]), "applet" + i, "applet_container" + i));
   }
   return code
