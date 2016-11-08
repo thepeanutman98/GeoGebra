@@ -58,7 +58,7 @@ function paramsLocalGeoFileToGitHubFile(params) {
 
 ```javascript
 function geoGebraAppletInjectCode(params, varName, div) {
-  return "var " + varName + " = new GGBApplet(" + JSON.stringify(params) + ', true); window.addEventListener("load", function(){' + varName + ".inject('" + div + "', 'preferHTML5')});"
+  return "var " + varName + " = new GGBApplet(" + JSON.stringify(params) + ', true); \n window.addEventListener("load", function(){' + varName + ".inject('" + div + "', 'preferHTML5')});"
 }
 ```
 
