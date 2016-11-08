@@ -111,7 +111,21 @@ function download(filename, text, encode) {
 ```
 
 ```javascript
-var codes = getRespectiveGeoAppletInjectCode(getGeoApplets(frame.contentDocument)); var text = ""; for (i in codes) {console.log(codes[i]); text += codes[i].split(";").join(";\n") + '\n';} frame.contentDocument.body.insertAdjacentHTML( 'afterbegin', '<script type="text/javascript">' + text + '</script>'); frame.contentDocument.body.insertAdjacentHTML( 'afterbegin', '<script src="https://www.geogebra.org/scripts/deployggb.js"></script>'); var num = getGeoApplets(frame.contentDocument).length - 1; for (i in codes) {console.log(i); getGeoApplets(frame.contentDocument)[i].outerHTML = '<div id="applet_container' + num + '"></div>'; num--} download(frame.src.split("/").slice(-1)[0],frame.contentDocument.documentElement.outerHTML,true);
+var codes = getRespectiveGeoAppletInjectCode(getGeoApplets(frame.contentDocument)); 
+var text = ""; 
+for (i in codes) {
+  console.log(codes[i]); 
+  text += codes[i].split(";").join(";\n") + '\n';
+} 
+frame.contentDocument.body.insertAdjacentHTML('afterbegin', '<script type="text/javascript">' + text + '</script>');
+frame.contentDocument.body.insertAdjacentHTML('afterbegin', '<script src="https://www.geogebra.org/scripts/deployggb.js"></script>');
+var num = getGeoApplets(frame.contentDocument).length - 1; 
+for (i in codes) {
+  console.log(i); 
+  getGeoApplets(frame.contentDocument)[i].outerHTML = '<div id="applet_container' + num + '"></div>'; 
+  num--;
+} 
+download(frame.src.split("/").slice(-1)[0],frame.contentDocument.documentElement.outerHTML,true);
 ```
 
 Not working:
