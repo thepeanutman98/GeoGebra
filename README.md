@@ -73,6 +73,17 @@ function getRespectiveGeoParams(applets) {
 ```
 
 ```javascript
+function getRespectiveGeoAppletInjectCode(applets) {
+  var code = [];
+  for (i in code) {
+    code.push(geoGebraAppletInjectCode(getGeoParams(applets[i])), "applet" + i, "applet_container" + i);
+  }
+  return code
+}
+```
+
+Not working:
+```javascript
 function replaceGeoAppletWithDiv(applet,divName) {
   var applet2 = applet
   applet2.outerHTML = '<div id="' + divName + '"></div>'
