@@ -74,7 +74,8 @@ function getRespectiveGeoParams(applets) {
 
 ```javascript
 function replaceGeoAppletWithDiv(applet,divName) {
-  applet.outerHTML = '<div id="' + divName + '"></div>'
-  return applet
+  var applet2 = applet
+  applet2.outerHTML = '<div id="' + divName + '"></div>'
+  return applet2
 }
 ```
