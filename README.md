@@ -61,3 +61,13 @@ function geoGebraAppletInjectCode(params, varName, div) {
   return "var " + varName + " = new GGBApplet(" + JSON.stringify(params) + ', true); window.addEventListener("load", function(){' + varName + ".inject('" + div + "', 'preferHTML5')});"
 }
 ```
+
+```javascript
+function getRespectiveGeoParams(applets) {
+  var params = [];
+  for (i in applets) {
+    params.push(getGeoParams(applets[i]);
+  }
+  return params
+}
+```
