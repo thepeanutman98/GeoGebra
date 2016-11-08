@@ -111,6 +111,10 @@ function download(filename, text, encode) {
 ```
 
 ```javascript
+var frame = document.createElement("iframe");
+frame.src = "http://mrskrummel.com/apps/Geometry/ch11_SurfaceArea.html";
+frame.style.display = "none";
+document.body.appendChild(frame);
 var codes = getRespectiveGeoAppletInjectCode(getGeoApplets(frame.contentDocument)); 
 var text = ""; 
 for (i in codes) {
@@ -126,13 +130,14 @@ for (i in codes) {
   num--;
 } 
 download(frame.src.split("/").slice(-1)[0],frame.contentDocument.documentElement.outerHTML,true);
+document.body.removeChild(frame);
 ```
 
 Not working:
 ```javascript
 function replaceGeoAppletWithDiv(applet,divName) {
-  var applet2 = applet
-  applet2.outerHTML = '<div id="' + divName + '"></div>'
-  return applet2
+  var applet2 = applet;
+  applet2.outerHTML = '<div id="' + divName + '"></div>';
+  return applet2;
 }
 ```
