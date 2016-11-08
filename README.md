@@ -77,3 +77,4 @@ function replaceGeoAppletWithDiv(applet,divName) {
   applet.outerHTML = '<div id="' + divName + '"></div>'
   return applet
 }
+```
