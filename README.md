@@ -82,6 +82,16 @@ function getRespectiveGeoAppletInjectCode(applets) {
 }
 ```
 
+```javascript
+function nullTest(str) {
+  if (str == null) {
+    return ""
+  } else {
+    return str
+  }
+}
+```
+
 Not working:
 ```javascript
 function replaceGeoAppletWithDiv(applet,divName) {
