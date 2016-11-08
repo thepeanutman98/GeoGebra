@@ -94,6 +94,22 @@ function nullTest(str) {
 }
 ```
 
+```javascript
+function download(filename, text, encode) {
+  var element = document.createElement('a');
+  if (encode) {
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));}
+  else {
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + text);
+  }
+  element.setAttribute('download', filename);
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
+```
+
 Not working:
 ```javascript
 function replaceGeoAppletWithDiv(applet,divName) {
