@@ -99,7 +99,7 @@ function download(filename, text, encode) {
   element.click();
   document.body.removeChild(element);
 }
-var codes = self.getRespectiveGeoAppletInjectCode(self.getGeoApplets(document)); 
+var codes = getRespectiveGeoAppletInjectCode(getGeoApplets(document)); 
 var text = ""; 
 for (i in codes) {
   text += codes[i].split(";").join(";\n") + '\n';
@@ -107,9 +107,9 @@ for (i in codes) {
 document.body.insertAdjacentHTML('afterbegin', '<script type="text/javascript">' + text + '</script>');
 eval(text)
 document.body.insertAdjacentHTML('afterbegin', '<script src="https://www.geogebra.org/scripts/deployggb.js"></script>');
-var num = self.getGeoApplets(document).length - 1; 
+var num = .getGeoApplets(document).length - 1; 
 for (i in codes) {
-  self.getGeoApplets(document)[i].outerHTML = '<div id="applet_container' + num + '"></div>'; 
+  getGeoApplets(document)[i].outerHTML = '<div id="applet_container' + num + '"></div>'; 
   num--;
 }
 
