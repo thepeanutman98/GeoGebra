@@ -1,3 +1,4 @@
+(function(){
 /*
   @author: GeoGebra - Dynamic Mathematics for Everyone, http://www.geogebra.org
   @license: This file is subject to the GeoGebra Non-Commercial License Agreement, see http://www.geogebra.org/license. For questions please write us at office@geogebra.org.
@@ -111,3 +112,6 @@ for (i in codes) {
   self.getGeoApplets(document)[i].outerHTML = '<div id="applet_container' + num + '"></div>'; 
   num--;
 }
+
+})()
+  
