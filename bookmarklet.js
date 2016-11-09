@@ -107,7 +107,7 @@ for (i in codes) {
 document.body.insertAdjacentHTML('afterbegin', '<script type="text/javascript">' + text + '</script>');
 eval(text)
 document.body.insertAdjacentHTML('afterbegin', '<script src="https://www.geogebra.org/scripts/deployggb.js"></script>');
-var num = .getGeoApplets(document).length - 1; 
+var num = getGeoApplets(document).length - 1; 
 for (i in codes) {
   getGeoApplets(document)[i].outerHTML = '<div id="applet_container' + num + '"></div>'; 
   num--;
