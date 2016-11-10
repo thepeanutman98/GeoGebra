@@ -60,7 +60,7 @@ function paramsLocalGeoFileToGitHubFile(params) {
   params2["filename"] = "https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/" + params2["filename"]; 
   return params2
 }
-function geoGebraAppletInjectCode(params, varName, div) {
+var geoGebraAppletInjectCodefunction = function(params, varName, div) {
   this.defVar = "var " + varName + " = new GGBApplet(" + JSON.stringify(params) + ', true);'
   this.addListener = ';window.addEventListener("load", function(){' + varName + ".inject('" + div + "', 'preferHTML5')});"
   return "var " + varName + " = new GGBApplet(" + JSON.stringify(params) + ', true);window.addEventListener("load", function(){' + varName + ".inject('" + div + "', 'preferHTML5')});"
