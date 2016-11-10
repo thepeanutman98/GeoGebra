@@ -60,7 +60,7 @@ function paramsLocalGeoFileToGitHubFile(params) {
   params2["filename"] = "https://raw.githubusercontent.com/thepeanutman98/GeoGebra-Java-to-HTML5/master/files/" + params2["filename"]; 
   return params2
 }
-var geoGebraAppletInjectCodefunction = function(params, varName, div) {
+var geoGebraAppletInjectCode = function(params, varName, div) {
   this.defVar = "var " + varName + " = new GGBApplet(" + JSON.stringify(params) + ', true);';
   this.addListener = ';window.addEventListener("load", function(){' + varName + ".inject('" + div + "', 'preferHTML5')});";
   return "var " + varName + " = new GGBApplet(" + JSON.stringify(params) + ', true);window.addEventListener("load", function(){' + varName + ".inject('" + div + "', 'preferHTML5')});"
@@ -76,7 +76,7 @@ function getRespectiveGeoAppletInjectCode(applets) {
   var code = [];
   var num = 0
   for (i in applets) {
-    code.push(geoGebraAppletInjectCode(paramsLocalGeoFileToGitHubFile(getGeoParams(applets[i])), "applet" + num, "applet_container" + num));
+    code.push(geoGebraAppletInjectCode(getGeoParams(applets[i]), "applet" + num, "applet_container" + num));
     num++
   }
   return code
