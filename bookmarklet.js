@@ -102,12 +102,10 @@ function download(filename, text, encode) {
   document.body.removeChild(element);
 }
 var codes = getRespectiveGeoAppletInjectCode(getGeoApplets(document)); 
-var text = ""; 
-var num = 0;
+var text = "";
 for (i in codes) {
   text += codes[i].split(";").join(";\n") + '\n';
-  //eval();
-  //num==;
+  eval(codes[i].split(";")[0]);
 } 
 document.body.insertAdjacentHTML('afterbegin', '<script type="text/javascript">' + text + '</script>');
 document.body.insertAdjacentHTML('afterbegin', '<script src="https://www.geogebra.org/scripts/deployggb.js"></script>');
@@ -115,6 +113,7 @@ var num = getGeoApplets(document).length - 1;
 for (i in codes) {
   getGeoApplets(document)[i].outerHTML = '<div id="applet_container' + num + '"></div>'; 
   num--;
+  eval(codes[i].split(";")[1].split("{")[1].split("}")[0])
 }
 
 })()
