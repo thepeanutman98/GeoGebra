@@ -45,7 +45,7 @@ function getGeoApplets(doc = document) {
   var applets = []; 
   for (i in Array.from(doc.getElementsByTagName("applet"))) {
     try {
-      var tester = doc.getElementsByTagName("applet")[i].getAttribute("codebase").indexOf("geogebra")
+      var tester = doc.getElementsByTagName("applet")[i].getAttribute("code").indexOf("geogebra")
     } catch (err) {
       var tester = -2
     }; 
