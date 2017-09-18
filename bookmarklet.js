@@ -1,5 +1,4 @@
 (function(){
-while (!GGBApplet) {};
 function getGeoParams(applet) {
   var params = {}; 
   for (i in applet.children) {
